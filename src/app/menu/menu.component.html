@@ -1,0 +1,23 @@
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark menu">
+        <div><a href="#" class="navbar-brand">
+            SportyShoes</a>
+        </div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"  routerLink="/welcome/root" class="nav-link">HOME</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"  routerLink="/main" class="nav-link">SPORTIFY</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"  routerLink=" " class="nav-link">MEN</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"  routerLink=" " class="nav-link">WOMEN</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"  routerLink=" " class="nav-link">KIDS</a></li>
+            
+            
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a  *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()"routerLink="/login" class="nav-link">Login</a></li>
+                <li><a  *ngIf="hardcodedAuthenticationService.isUserLoggedIn()"routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+
+    
